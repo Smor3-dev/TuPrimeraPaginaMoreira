@@ -37,3 +37,7 @@ Sitio web realizado con Django para mostrar artículos de herrería artesanal.
    - Sitio web: [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
    - Admin: [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/)
 
+8. Ejemplo
+   - En Categoria: Mesas
+   - En Artesano: Nombre [Juan], Especialidad [Herreria], Contacto [Juan@gmail.com]
+   - En Articulo: Titulo [Mesa de Hierro], Descripcion [Mesa 120cm x 30cm], Imagen [opcional], Categoria [Mesas], Artesano [Juan]

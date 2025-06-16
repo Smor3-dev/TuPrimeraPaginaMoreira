@@ -22,6 +22,10 @@
                     <div class="card-body">
                         <h5 class="card-title">{{ articulo.titulo }}</h5>
                         <p class="card-text">{{ articulo.descripcion }}</p>
+                        <p class="text-muted">Categoría: {{ articulo.categoria }}</p>
+                        <hr>
+                        <p><strong>Artesano:</strong> {{ articulo.artesano.nombre }}</p>
+                        <p><strong>Especialidad:</strong> {{ articulo.artesano.especialidad }}</p>
                     </div>
                 </div>
             </div>
