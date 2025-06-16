@@ -14,4 +14,4 @@ class ArtesanoForm(forms.ModelForm):
 class ArticuloForm(forms.ModelForm):
     class Meta:
         model = Articulo
-        fields = ['titulo', 'descripcion', 'categoria', 'artesano']
+        fields = ['titulo', 'descripcion', 'imagen', 'categoria', 'artesano']

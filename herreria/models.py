@@ -17,9 +17,11 @@ class Artesano(models.Model):
 class Articulo(models.Model):
     titulo = models.CharField(max_length=100)
     descripcion = models.TextField()
+    imagen = models.ImageField(upload_to='articulos/', null=True, blank=True)
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
     artesano = models.ForeignKey(Artesano, on_delete=models.CASCADE)
     fecha_creacion = models.DateField(auto_now_add=True)
+
 
     def __str__(self):
         return self.titulo

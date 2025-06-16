@@ -1,19 +1,35 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 {% block contenido %}
-<h2>Buscar Artículo</h2>
-<form method="get">
-    <input type="text" name="titulo" placeholder="Buscar por título">
-    <button type="submit">Buscar</button>
+<h2 class="mb-4">Buscar Artículo</h2>
+
+<form method="get" class="w-50 mx-auto p-4 bg-white border rounded shadow" enctype="multipart/form-data">
+    <div class="mb-3">
+        <input type="text" name="titulo" placeholder="Titulo del artículo" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-dark">Buscar</button>
 </form>
 
-{% if resultado %}
-    <h3>Resultados:</h3>
-    <ul>
-    {% for articulo in resultado %}
-        <li>{{ articulo.titulo }} - {{ articulo.descripcion }}</li>
-    {% empty %}
-        <li>No se encontraron resultados.</li>
-    {% endfor %}
-    </ul>
+{% if resultado != None %}
+    <h3 class="mt-5">Resultados:</h3>
+    {% if resultado %}
+        <div class="row mt-4">
+        {% for articulo in resultado %}
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow">
+                    {% if articulo.imagen %}
+                        <img src="{{ articulo.imagen.url }}" class="card-img-top" alt="Imagen del artículo">
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title">{{ articulo.titulo }}</h5>
+                        <p class="card-text">{{ articulo.descripcion }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+    {% else %}
+        <p class="text-muted">No se encontraron artículos.</p>
+    {% endif %}
 {% endif %}
+
 {% endblock %}

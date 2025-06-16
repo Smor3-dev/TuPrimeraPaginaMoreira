@@ -27,7 +27,7 @@ def cargar_artesano(request):
 
 def cargar_articulo(request):
     if request.method == 'POST':
-        form = ArticuloForm(request.POST)
+        form = ArticuloForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             return redirect('inicio')
