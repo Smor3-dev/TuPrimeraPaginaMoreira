@@ -37,6 +37,3 @@ Sitio web realizado con Django para mostrar artículos de herrería artesanal.
    - Sitio web: [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
    - Admin: [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/)
 
----
-
-¿Querés que ahora te guíe para hacer el **push a GitHub**?
